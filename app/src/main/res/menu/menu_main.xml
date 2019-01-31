@@ -4,7 +4,15 @@
     tools:context="com.cms.leesin.MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:icon="@drawable/ic_settings"
+        android:orderInCategory="10"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_shopping"
+        android:icon="@drawable/ic_shopping_cart"
+        android:orderInCategory="20"
+        android:title="@string/action_shopping"
+        app:showAsAction="ifRoom" />
 </menu>

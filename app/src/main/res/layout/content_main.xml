@@ -13,10 +13,11 @@
         android:id="@+id/genresTitle"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:background="@android:color/darker_gray"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/genresTitle_text"
-        android:textColor="@color/colorTitle"
-        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:fontFamily="cursive"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +28,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/genresFootnote"
@@ -44,40 +45,57 @@
                 android:id="@+id/genresClassical"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:background="@color/colorClassical"
                 android:gravity="center_vertical"
+                android:onClick="onClassicalClick"
+                android:paddingStart="20dp"
                 android:paddingLeft="20dp"
-                android:text="Classical"
-                android:textSize="21sp"
+                android:paddingRight="20dp"
+                android:text="@string/classical_text"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/genresBlues"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:background="@color/colorBlues"
                 android:gravity="center_vertical"
+                android:paddingStart="20dp"
                 android:paddingLeft="20dp"
-                android:text="Blues"
-                android:textSize="21sp"
+                android:paddingRight="20dp"
+                android:text="@string/blues_text"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/genresJazz"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:background="@color/colorJazz"
                 android:gravity="center_vertical"
+                android:paddingStart="20dp"
                 android:paddingLeft="20dp"
-                android:text="Jazz"
-                android:textSize="21sp"
+                android:paddingRight="20dp"
+                android:text="@string/jazz_text"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/genresRock"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:background="@color/colorRock"
                 android:gravity="center_vertical"
+                android:paddingStart="20dp"
                 android:paddingLeft="20dp"
-                android:text="Rock"
-                android:textSize="21sp"
+                android:paddingRight="20dp"
+                android:text="@string/rock_text"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -102,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
  />
 
 </android.support.constraint.ConstraintLayout>

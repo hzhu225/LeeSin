@@ -19,6 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ClassicalActivity"
+            android:label= "@string/classical_text"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ClassicalTheme">
+        </activity>
     </application>
 
 </manifest>
