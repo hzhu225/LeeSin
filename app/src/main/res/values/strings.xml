@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lee Sin</string>
+    <string name="action_settings">Settings</string>
+    <string name="genresTitle_text">Music Genres</string>
+    <string name="genresFootnote_text">Life is a journey through a desert and music is the oasis.</string>
+</resources>
