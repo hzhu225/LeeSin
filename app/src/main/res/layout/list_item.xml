@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Music Name"/>
+        tools:text="Music Name" />
 
     <TextView
         android:id="@+id/artistName_tv"

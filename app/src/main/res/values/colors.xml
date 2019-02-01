@@ -4,10 +4,12 @@
     <color name="colorPrimaryDark">#1874CD</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorTitle">#FF8C00</color>
-    <color name="colorClassical">#FF4040</color>
-    <color name="colorClassicalLight">#AAFF8D8D</color>
+    <color name="colorClassical">#55AA55</color>
+    <color name="colorClassicalLight">#AAAAFFAA</color>
     <color name="colorBlues">#FF8C00</color>
     <color name="colorJazz">#FFCC00</color>
-    <color name="colorRock">#55AA55</color>
+    <color name="colorRock">#FF4040</color>
+    <color name="colorRockLight">#AAFF8D8D</color>
     <color name="colorFootnote">#7D26CD</color>
+    <color name="colorNowPlaying">#97FFFF</color>
 </resources>
