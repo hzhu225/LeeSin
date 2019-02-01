@@ -4,13 +4,13 @@ public class Music
 {
     private String mMusicName;
     private String mArtistName;
-    private String mYear;
+    private String mLength;
 
-    public Music(String musicName, String artistName, String year)
+    public Music(String musicName, String artistName, String length)
     {
         mMusicName = musicName;
         mArtistName = artistName;
-        mYear = year;
+        mLength = length;
     }
 
     public String getMusicName()
@@ -23,8 +23,8 @@ public class Music
         return mArtistName;
     }
 
-    public String getYear()
+    public String getLength()
     {
-        return mYear;
+        return mLength;
     }
 }
