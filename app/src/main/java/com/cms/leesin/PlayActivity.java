@@ -22,7 +22,7 @@ public class PlayActivity extends AppCompatActivity
         ConstraintLayout playLayout = findViewById(R.id.play_Layout);
 
         playing = true;               //Start playing automatically when get into this activity
-        Music currentMusic = null;
+        Music currentMusic;
 
         Intent intent = getIntent();
         String genres = intent.getStringExtra("genres");
@@ -43,6 +43,8 @@ public class PlayActivity extends AppCompatActivity
                 playLayout.setBackgroundResource(R.color.colorJazzLight);
                 break;
             case "rock":
+                currentMusic = RockActivity.musics_rock.get(position);
+                playLayout.setBackgroundResource(R.color.colorRockLight);
                 break;
             default:
                 throw new IllegalArgumentException("Invalid genres");
