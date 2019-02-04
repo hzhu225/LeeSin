@@ -8,5 +8,7 @@
     <string name="blues_text">Blues</string>
     <string name="jazz_text">Jazz</string>
     <string name="rock_text">Rock</string>
+    <string name="nowPlaying_text">Now Playing…</string>
+    <string name="playButton_description">playButton</string>
 
 </resources>

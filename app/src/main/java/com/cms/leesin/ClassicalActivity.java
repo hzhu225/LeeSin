@@ -1,20 +1,17 @@
 package com.cms.leesin;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class ClassicalActivity extends AppCompatActivity
 {
+    public static ArrayList<Music> musics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,7 +19,8 @@ public class ClassicalActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classical);
 
-        ArrayList<Music> musics = new ArrayList<>();
+        musics = new ArrayList<>();
+
         musics.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", "04:38"));
         musics.add(new Music("Magic Flute: Queen Of The Night", "Mozart", "06:52"));
         musics.add(new Music("Moonlight Sonata", "Beethoven", "07:15"));
@@ -44,9 +42,9 @@ public class ClassicalActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                //Music music_clicked = (Music) parent.getSelectedItem();
-                Toast.makeText(getApplicationContext(), Integer.toString(position),Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(this, )
+                Intent intent = new Intent(ClassicalActivity.this, PlayActivity.class);
+                intent.putExtra("music", position);
+                startActivityForResult(intent, 1);
             }
         });
     }
