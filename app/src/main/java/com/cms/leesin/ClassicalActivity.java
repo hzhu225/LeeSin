@@ -19,6 +19,7 @@ public class ClassicalActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classical);
 
+        //Create an ArrayList of Music objects
         musics_classical = new ArrayList<>();
 
         musics_classical.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", "04:38"));
@@ -37,6 +38,8 @@ public class ClassicalActivity extends AppCompatActivity
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_classical);
         final ListView listView = findViewById(R.id.classical_ListView);
         listView.setAdapter(musicAdapter);
+
+        //Add onClickListener for each item in listView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override

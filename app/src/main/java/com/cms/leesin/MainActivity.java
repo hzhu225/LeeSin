@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //The shopping button
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,32 @@ public class MainActivity extends AppCompatActivity
                 displayToast("Shopping Center is not yet open.");
             }
         });
+
+
+        //Set OnClickListener for each genres
+        TextView classical = findViewById(R.id.genresClassical);
+        classical.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(MainActivity.this, ClassicalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        TextView blues = findViewById(R.id.genresBlues);
+        blues.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(MainActivity.this, BluesActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -59,18 +87,6 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
-    public void onClassicalClick(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, ClassicalActivity.class);
-        startActivity(intent);
-    }
-
-    public void onBluesClick(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, BluesActivity.class);
-        startActivity(intent);
-    }
 
     public void displayToast(String message)
     {

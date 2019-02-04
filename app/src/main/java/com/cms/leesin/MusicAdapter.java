@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+//A custom adapter for Music class
 public class MusicAdapter extends ArrayAdapter<Music>
 {
     public MusicAdapter(Context context, ArrayList<Music> resource)

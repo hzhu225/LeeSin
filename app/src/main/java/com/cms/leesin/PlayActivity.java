@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class PlayActivity extends AppCompatActivity
 {
@@ -25,7 +24,6 @@ public class PlayActivity extends AppCompatActivity
         Intent intent = getIntent();
         String genres = intent.getStringExtra("genres");
         int position = intent.getIntExtra("position", -1);
-
 
         if(genres.equals("classical"))
         {
@@ -48,7 +46,7 @@ public class PlayActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);    //return to parent activity
+                NavUtils.navigateUpFromSameTask(this);      //return to parent activity
                 return true;
         }
         return super.onOptionsItemSelected(item);

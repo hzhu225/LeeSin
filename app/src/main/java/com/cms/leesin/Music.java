@@ -1,5 +1,6 @@
 package com.cms.leesin;
 
+//A custom class which is used to store music info: Music Name, Artist Name and Length
 public class Music
 {
     private String mMusicName;
