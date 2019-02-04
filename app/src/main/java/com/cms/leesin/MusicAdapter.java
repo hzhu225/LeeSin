@@ -30,13 +30,13 @@ public class MusicAdapter extends ArrayAdapter<Music>
 
         Music currentMusic = getItem(position);
 
-        TextView musicNameTV = listItemView.findViewById(R.id.musicName_tv);
+        TextView musicNameTV = listItemView.findViewById(R.id.listItem_musicName);
         musicNameTV.setText(currentMusic.getMusicName());
 
-        TextView artistNameTV = listItemView.findViewById(R.id.artistName_tv);
+        TextView artistNameTV = listItemView.findViewById(R.id.listItem_artistName);
         artistNameTV.setText(currentMusic.getArtistName());
 
-        TextView lengthTV = listItemView.findViewById(R.id.length_tv);
+        TextView lengthTV = listItemView.findViewById(R.id.listItem_length);
         lengthTV.setText(currentMusic.getLength());
 
         return listItemView;

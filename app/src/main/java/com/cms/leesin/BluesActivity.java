@@ -27,7 +27,7 @@ public class BluesActivity extends AppCompatActivity
         musics_blues.add(new Music("Für Elise", "Beethoven", "06:16"));
         musics_blues.add(new Music("Toccata And Fugue In D Minor", "Bach", "09:12"));
         musics_blues.add(new Music("Air On The G String", "Bach", "04:23"));
-        musics_blues.add(new Music("1812 Overture", "Tchaikovsky", "07:19"));
+        musics_blues.add(new Music("1812123 Overture", "Tchaikovsky", "07:19"));
         musics_blues.add(new Music("William Tell Overture", "Rossini", "05:48"));
         musics_blues.add(new Music("Canon In D", "Pachelbel", "04:17"));
         musics_blues.add(new Music("Blue Danube", "Strauss", "06:07"));
@@ -43,8 +43,9 @@ public class BluesActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 Intent intent = new Intent(BluesActivity.this, PlayActivity.class);
-                intent.putExtra("music", position);
-                startActivityForResult(intent, 1);
+                intent.putExtra("genres", "blues");
+                intent.putExtra("position", position);
+                startActivity(intent);
             }
         });
     }

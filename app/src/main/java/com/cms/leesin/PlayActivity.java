@@ -1,12 +1,13 @@
 package com.cms.leesin;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PlayActivity extends AppCompatActivity
@@ -19,23 +20,40 @@ public class PlayActivity extends AppCompatActivity
         setContentView(R.layout.activity_play);
 
         playing = true;
+        Music currentMusic;
+
         Intent intent = getIntent();
-        String call = getCallingActivity().getClassName();
-        int position = intent.getIntExtra("music", 0);
-        Music current = ClassicalActivity.musics_classical.get(position);
-        Toast.makeText(getApplicationContext(), call,Toast.LENGTH_SHORT).show();
+        String genres = intent.getStringExtra("genres");
+        int position = intent.getIntExtra("position", -1);
+
+
+        if(genres.equals("classical"))
+        {
+            currentMusic = ClassicalActivity.musics_classical.get(position);
+        }
+        else
+        {
+            currentMusic = BluesActivity.musics_blues.get(position);
+        }
+
+        TextView musicNameTV = findViewById(R.id.musicName_TV);
+        musicNameTV.setText(currentMusic.getMusicName());
+        TextView artistNameTV = findViewById(R.id.artistName_TV);
+        artistNameTV.setText(currentMusic.getArtistName());
+        TextView lengthTV = findViewById(R.id.length_TV);
+        lengthTV.setText(currentMusic.getLength());
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+                NavUtils.navigateUpFromSameTask(this);    //return to parent activity
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     public void playButtonClick(View view)
     {
@@ -50,6 +68,5 @@ public class PlayActivity extends AppCompatActivity
             playButton.setImageResource(R.drawable.ic_play);
             playing = true;
         }
-
     }
 }

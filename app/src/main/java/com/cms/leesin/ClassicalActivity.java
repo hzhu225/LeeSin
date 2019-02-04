@@ -43,8 +43,9 @@ public class ClassicalActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 Intent intent = new Intent(ClassicalActivity.this, PlayActivity.class);
-                intent.putExtra("music", position);
-                startActivityForResult(intent, 1);
+                intent.putExtra("genres", "classical");
+                intent.putExtra("position", position);
+                startActivity(intent);
             }
         });
     }
