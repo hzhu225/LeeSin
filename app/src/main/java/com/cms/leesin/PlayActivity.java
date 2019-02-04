@@ -2,6 +2,7 @@ package com.cms.leesin;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -18,21 +19,35 @@ public class PlayActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
-        playing = true;
-        Music currentMusic;
+        ConstraintLayout playLayout = findViewById(R.id.play_Layout);
+
+        playing = true;               //Start playing automatically when get into this activity
+        Music currentMusic = null;
 
         Intent intent = getIntent();
         String genres = intent.getStringExtra("genres");
         int position = intent.getIntExtra("position", -1);
 
-        if(genres.equals("classical"))
+        switch (genres)
         {
-            currentMusic = ClassicalActivity.musics_classical.get(position);
+            case "classical":
+                currentMusic = ClassicalActivity.musics_classical.get(position);
+                playLayout.setBackgroundResource(R.color.colorClassicalLight);
+                break;
+            case "blues":
+                currentMusic = BluesActivity.musics_blues.get(position);
+                playLayout.setBackgroundResource(R.color.colorBluesLight);
+                break;
+            case "jazz":
+                currentMusic = JazzActivity.musics_jazz.get(position);
+                playLayout.setBackgroundResource(R.color.colorJazzLight);
+                break;
+            case "rock":
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid genres");
         }
-        else
-        {
-            currentMusic = BluesActivity.musics_blues.get(position);
-        }
+
 
         TextView musicNameTV = findViewById(R.id.musicName_TV);
         musicNameTV.setText(currentMusic.getMusicName());
@@ -58,12 +73,12 @@ public class PlayActivity extends AppCompatActivity
         ImageButton playButton = (ImageButton) view;
         if(playing)
         {
-            playButton.setImageResource(R.drawable.ic_pause);
+            playButton.setImageResource(R.drawable.ic_play);
             playing = false;
         }
         else
         {
-            playButton.setImageResource(R.drawable.ic_play);
+            playButton.setImageResource(R.drawable.ic_pause);
             playing = true;
         }
     }

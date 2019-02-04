@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
         TextView blues = findViewById(R.id.genresBlues);
         blues.setOnClickListener(new View.OnClickListener()
         {
@@ -56,6 +55,16 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        TextView jazz = findViewById(R.id.genresJazz);
+        jazz.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(MainActivity.this, JazzActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

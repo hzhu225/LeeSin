@@ -6,11 +6,11 @@
     <color name="colorClassical">#55AA55</color>
     <color name="colorClassicalLight">#AAAAFFAA</color>
     <color name="colorBlues">#FF8C00</color>
-    <color name="colorBluesLight">#AAFFCC88</color>
-    <color name="colorJazz">#FFCC00</color>
+    <color name="colorBluesLight">#AAFFBB66</color>
+    <color name="colorJazz">#D5BD00</color>
+    <color name="colorJazzLight">#AAFFEE99</color>
     <color name="colorRock">#FF4040</color>
     <color name="colorRockLight">#AAFF8D8D</color>
     <color name="colorFootnote">#7D26CD</color>
-    <color name="colorNowPlayingBG">#97FFFF</color>
     <color name="colorPlayButtonBG">#FF4500</color>
 </resources>
