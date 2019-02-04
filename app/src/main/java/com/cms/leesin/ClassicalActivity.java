@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class ClassicalActivity extends AppCompatActivity
 {
-    public static ArrayList<Music> musics;
+    public static ArrayList<Music> musics_classical;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -19,22 +19,22 @@ public class ClassicalActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classical);
 
-        musics = new ArrayList<>();
+        musics_classical = new ArrayList<>();
 
-        musics.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", "04:38"));
-        musics.add(new Music("Magic Flute: Queen Of The Night", "Mozart", "06:52"));
-        musics.add(new Music("Moonlight Sonata", "Beethoven", "07:15"));
-        musics.add(new Music("Für Elise", "Beethoven", "06:16"));
-        musics.add(new Music("Toccata And Fugue In D Minor", "Bach", "09:12"));
-        musics.add(new Music("Air On The G String", "Bach", "04:23"));
-        musics.add(new Music("1812 Overture", "Tchaikovsky", "07:19"));
-        musics.add(new Music("William Tell Overture", "Rossini", "05:48"));
-        musics.add(new Music("Canon In D", "Pachelbel", "04:17"));
-        musics.add(new Music("Blue Danube", "Strauss", "06:07"));
-        musics.add(new Music("Messiah: Hallelujah Chorus", "Handel", "05:38"));
-        musics.add(new Music("Over The Waves", "Rosas", "04:10"));
+        musics_classical.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", "04:38"));
+        musics_classical.add(new Music("Magic Flute: Queen Of The Night", "Mozart", "06:52"));
+        musics_classical.add(new Music("Moonlight Sonata", "Beethoven", "07:15"));
+        musics_classical.add(new Music("Für Elise", "Beethoven", "06:16"));
+        musics_classical.add(new Music("Toccata And Fugue In D Minor", "Bach", "09:12"));
+        musics_classical.add(new Music("Air On The G String", "Bach", "04:23"));
+        musics_classical.add(new Music("1812 Overture", "Tchaikovsky", "07:19"));
+        musics_classical.add(new Music("William Tell Overture", "Rossini", "05:48"));
+        musics_classical.add(new Music("Canon In D", "Pachelbel", "04:17"));
+        musics_classical.add(new Music("Blue Danube", "Strauss", "06:07"));
+        musics_classical.add(new Music("Messiah: Hallelujah Chorus", "Handel", "05:38"));
+        musics_classical.add(new Music("Over The Waves", "Rosas", "04:10"));
 
-        MusicAdapter musicAdapter = new MusicAdapter(this, musics);
+        MusicAdapter musicAdapter = new MusicAdapter(this, musics_classical);
         final ListView listView = findViewById(R.id.classical_ListView);
         listView.setAdapter(musicAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -48,8 +48,4 @@ public class ClassicalActivity extends AppCompatActivity
             }
         });
     }
-
-
-
-
 }

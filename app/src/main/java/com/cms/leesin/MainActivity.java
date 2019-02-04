@@ -66,9 +66,16 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void onBluesClick(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, BluesActivity.class);
+        startActivity(intent);
+    }
 
     public void displayToast(String message)
     {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+
+
 }

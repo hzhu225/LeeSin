@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -23,14 +23,17 @@
             android:name=".ClassicalActivity"
             android:label="@string/classical_text"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/ClassicalTheme"></activity>
+            android:theme="@style/ClassicalTheme" />
 
-        <activity android:name=".PlayActivity"
+        <activity android:name=".BluesActivity"
+            android:label="@string/blues_text"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/BluesTheme"/>
+
+        <activity
+            android:name=".PlayActivity"
             android:label="@string/nowPlaying_text"
-            android:parentActivityName=".ClassicalActivity">
-        </activity>
+            android:parentActivityName=".ClassicalActivity"/>
     </application>
-
-
 
 </manifest>

@@ -52,13 +52,13 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/playButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="05:00" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/playButton"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -68,6 +68,7 @@
         android:layout_marginBottom="100dp"
         android:background="@color/colorPlayButtonBG"
         android:contentDescription="@string/playButton_description"
+        android:onClick="playButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
