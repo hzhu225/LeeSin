@@ -23,18 +23,20 @@ public class RockActivity extends AppCompatActivity
         //Create an ArrayList of Music objects
         musics_rock = new ArrayList<>();
 
-        musics_rock.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", "04:38"));
-        musics_rock.add(new Music("Magic Flute: Queen Of The Night", "Mozart", "06:52"));
-        musics_rock.add(new Music("Moonlight Sonata", "Beethoven", "07:15"));
-        musics_rock.add(new Music("Für Elise", "Beethoven", "06:16"));
-        musics_rock.add(new Music("Toccata And Fugue In D Minor", "Bach", "09:12"));
-        musics_rock.add(new Music("Air On The G String", "Bach", "04:23"));
-        musics_rock.add(new Music("1812 Overture", "Tchaikovsky", "07:19"));
-        musics_rock.add(new Music("William Tell Overture", "Rossini", "05:48"));
-        musics_rock.add(new Music("Canon In D", "Pachelbel", "04:17"));
-        musics_rock.add(new Music("Blue Danube", "Strauss", "06:07"));
-        musics_rock.add(new Music("Messiah: Hallelujah Chorus", "Handel", "05:38"));
-        musics_rock.add(new Music("Over The Waves", "Rosas", "04:10"));
+        musics_rock.add(new Music("Waly This Way", "Aerosmith", 201));
+        musics_rock.add(new Music("Born To Be Wild", "Steppenwolf", 302));
+        musics_rock.add(new Music("Enter Sandman", "Metallica", 242));
+        musics_rock.add(new Music("A Day in the Life", "The Beatles", 291));
+        musics_rock.add(new Music("Hey Jude", "The Beatles", 259));
+        musics_rock.add(new Music("Smoke On The Water", "Deep Purple", 245));
+        musics_rock.add(new Music("Just the Way You Are", "Billy Joel", 270));
+        musics_rock.add(new Music("Rock and Roll All Nite", "Kiss", 310));
+        musics_rock.add(new Music("Fame", "David Bowie", 227));
+        musics_rock.add(new Music("What'd I Say", "Ray Charles", 283));
+        musics_rock.add(new Music("Eight Miles High", "The Byrds", 247));
+        musics_rock.add(new Music("The Tracks of My Tears", "The Miracles", 316));
+        musics_rock.add(new Music("Omaha", "Moby Grape", 214));
+        musics_rock.add(new Music("Get Up Stand Up", "The Wailers", 243));
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_rock);
         final ListView listView = findViewById(R.id.rock_ListView);

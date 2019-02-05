@@ -22,17 +22,17 @@ public class JazzActivity extends AppCompatActivity
         //Create an ArrayList of Music objects
         musics_jazz = new ArrayList<>();
 
-        musics_jazz.add(new Music("Take Five", "Dave Brubeck", "04:38"));
-        musics_jazz.add(new Music("Round Midnight", "Thelonious Monk", "06:52"));
-        musics_jazz.add(new Music("My Favorite Things", "John Coltrane", "07:15"));
-        musics_jazz.add(new Music("Strange Fruit", "Billie Holiday", "06:16"));
-        musics_jazz.add(new Music("Goodbye Pork Pie Hat", "Charles Mingus", "09:12"));
-        musics_jazz.add(new Music("Stolen Moments", "Oliver Nelson", "04:23"));
-        musics_jazz.add(new Music("My Funny Valentine", "Chet Baker", "07:19"));
-        musics_jazz.add(new Music("Song For My Father", "Horace Silver", "05:48"));
-        musics_jazz.add(new Music("Waltz For Debby", "Bill Evans", "04:17"));
-        musics_jazz.add(new Music("Poinciana", "Ahmad Jamal", "06:07"));
-        musics_jazz.add(new Music("Summertime", "Ella Fitzgerald", "05:38"));
+        musics_jazz.add(new Music("Take Five", "Dave Brubeck", 287));
+        musics_jazz.add(new Music("Round Midnight", "Thelonious Monk", 274));
+        musics_jazz.add(new Music("My Favorite Things", "John Coltrane", 321));
+        musics_jazz.add(new Music("Strange Fruit", "Billie Holiday", 274));
+        musics_jazz.add(new Music("Goodbye Pork Pie Hat", "Charles Mingus", 240));
+        musics_jazz.add(new Music("Stolen Moments", "Oliver Nelson", 263));
+        musics_jazz.add(new Music("My Funny Valentine", "Chet Baker", 227));
+        musics_jazz.add(new Music("Song For My Father", "Horace Silver", 253));
+        musics_jazz.add(new Music("Waltz For Debby", "Bill Evans", 280));
+        musics_jazz.add(new Music("Poinciana", "Ahmad Jamal", 265));
+        musics_jazz.add(new Music("Summertime", "Ella Fitzgerald", 318));
 
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_jazz);

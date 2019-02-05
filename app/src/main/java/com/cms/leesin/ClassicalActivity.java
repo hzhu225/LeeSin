@@ -22,18 +22,18 @@ public class ClassicalActivity extends AppCompatActivity
         //Create an ArrayList of Music objects
         musics_classical = new ArrayList<>();
 
-        musics_classical.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", "04:38"));
-        musics_classical.add(new Music("Magic Flute: Queen Of The Night", "Mozart", "06:52"));
-        musics_classical.add(new Music("Moonlight Sonata", "Beethoven", "07:15"));
-        musics_classical.add(new Music("Für Elise", "Beethoven", "06:16"));
-        musics_classical.add(new Music("Toccata And Fugue In D Minor", "Bach", "09:12"));
-        musics_classical.add(new Music("Air On The G String", "Bach", "04:23"));
-        musics_classical.add(new Music("1812 Overture", "Tchaikovsky", "07:19"));
-        musics_classical.add(new Music("William Tell Overture", "Rossini", "05:48"));
-        musics_classical.add(new Music("Canon In D", "Pachelbel", "04:17"));
-        musics_classical.add(new Music("Blue Danube", "Strauss", "06:07"));
-        musics_classical.add(new Music("Messiah: Hallelujah Chorus", "Handel", "05:38"));
-        musics_classical.add(new Music("Over The Waves", "Rosas", "04:10"));
+        musics_classical.add(new Music("Eine Kleine Nachtmusik: Allegro", "Mozart", 256));
+        musics_classical.add(new Music("Magic Flute: Queen Of The Night", "Mozart", 312));
+        musics_classical.add(new Music("Moonlight Sonata", "Beethoven", 402));
+        musics_classical.add(new Music("Für Elise", "Beethoven", 374));
+        musics_classical.add(new Music("Toccata And Fugue In D Minor", "Bach", 246));
+        musics_classical.add(new Music("Air On The G String", "Bach", 274));
+        musics_classical.add(new Music("1812 Overture", "Tchaikovsky", 305));
+        musics_classical.add(new Music("William Tell Overture", "Rossini", 332));
+        musics_classical.add(new Music("Canon In D", "Pachelbel", 297));
+        musics_classical.add(new Music("Blue Danube", "Strauss", 270));
+        musics_classical.add(new Music("Messiah: Hallelujah Chorus", "Handel", 319));
+        musics_classical.add(new Music("Over The Waves", "Rosas", 263));
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_classical);
         final ListView listView = findViewById(R.id.classical_ListView);

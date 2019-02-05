@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 //A custom adapter for Music class
 public class MusicAdapter extends ArrayAdapter<Music>
@@ -31,14 +32,20 @@ public class MusicAdapter extends ArrayAdapter<Music>
 
         Music currentMusic = getItem(position);
 
-        TextView musicNameTV = listItemView.findViewById(R.id.listItem_musicName);
-        musicNameTV.setText(currentMusic.getMusicName());
+        if(currentMusic != null)
+        {
+            TextView musicNameTV = listItemView.findViewById(R.id.listItem_musicName);
+            musicNameTV.setText(currentMusic.getMusicName());
 
-        TextView artistNameTV = listItemView.findViewById(R.id.listItem_artistName);
-        artistNameTV.setText(currentMusic.getArtistName());
+            TextView artistNameTV = listItemView.findViewById(R.id.listItem_artistName);
+            artistNameTV.setText(currentMusic.getArtistName());
 
-        TextView lengthTV = listItemView.findViewById(R.id.listItem_length);
-        lengthTV.setText(currentMusic.getLength());
+            TextView lengthTV = listItemView.findViewById(R.id.listItem_length);
+            int length = currentMusic.getLength();
+            String minutes = String.format(Locale.getDefault(), "%02d", length / 60);
+            String seconds = String.format(Locale.getDefault(), "%02d", length % 60);
+            lengthTV.setText(minutes + ":" + seconds);
+        }
 
         return listItemView;
     }

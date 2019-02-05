@@ -70,11 +70,10 @@
         android:layout_marginBottom="100dp"
         android:background="@color/colorPlayButtonBG"
         android:contentDescription="@string/playButton_description"
-        android:onClick="playButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_pause"
+        app:srcCompat="@drawable/ic_play"
         tools:ignore="VectorDrawableCompat" />
 
 </android.support.constraint.ConstraintLayout>

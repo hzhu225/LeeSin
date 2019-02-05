@@ -5,13 +5,13 @@ public class Music
 {
     private String mMusicName;
     private String mArtistName;
-    private String mLength;
+    private int mLength;
 
-    public Music(String musicName, String artistName, String length)
+    public Music(String musicName, String artistName, int length)
     {
         mMusicName = musicName;
         mArtistName = artistName;
-        mLength = length;
+        mLength = length;                //length in second
     }
 
     public String getMusicName()
@@ -24,7 +24,7 @@ public class Music
         return mArtistName;
     }
 
-    public String getLength()
+    public int getLength()
     {
         return mLength;
     }
