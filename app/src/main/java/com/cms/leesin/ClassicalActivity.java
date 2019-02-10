@@ -17,7 +17,7 @@ public class ClassicalActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_classical);
+        setContentView(R.layout.music_list);
 
         //Create an ArrayList of Music objects
         musics_classical = new ArrayList<>();
@@ -36,7 +36,8 @@ public class ClassicalActivity extends AppCompatActivity
         musics_classical.add(new Music("Over The Waves", "Rosas", 263));
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_classical);
-        final ListView listView = findViewById(R.id.classical_ListView);
+        ListView listView = findViewById(R.id.music_ListView);
+        listView.setBackgroundResource(R.color.colorClassicalLight);
         listView.setAdapter(musicAdapter);
 
         //Add onClickListener for each item in listView

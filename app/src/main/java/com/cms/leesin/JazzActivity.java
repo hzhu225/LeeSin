@@ -17,7 +17,7 @@ public class JazzActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jazz);
+        setContentView(R.layout.music_list);
 
         //Create an ArrayList of Music objects
         musics_jazz = new ArrayList<>();
@@ -36,7 +36,8 @@ public class JazzActivity extends AppCompatActivity
 
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_jazz);
-        final ListView listView = findViewById(R.id.jazz_ListView);
+        ListView listView = findViewById(R.id.music_ListView);
+        listView.setBackgroundResource(R.color.colorJazzLight);
         listView.setAdapter(musicAdapter);
 
         //Add onClickListener for each item in listView

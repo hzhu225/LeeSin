@@ -17,7 +17,7 @@ public class BluesActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blues);
+        setContentView(R.layout.music_list);
 
         //Create an ArrayList of Music objects
         musics_blues = new ArrayList<>();
@@ -38,7 +38,8 @@ public class BluesActivity extends AppCompatActivity
         musics_blues.add(new Music("Hard Luck Blues", "Roy Brown", 253));
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_blues);
-        final ListView listView = findViewById(R.id.blues_ListView);
+        ListView listView = findViewById(R.id.music_ListView);
+        listView.setBackgroundResource(R.color.colorBluesLight);
         listView.setAdapter(musicAdapter);
 
         //Add onClickListener for each item in listView

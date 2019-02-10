@@ -18,7 +18,7 @@ public class RockActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rock);
+        setContentView(R.layout.music_list);
 
         //Create an ArrayList of Music objects
         musics_rock = new ArrayList<>();
@@ -39,7 +39,8 @@ public class RockActivity extends AppCompatActivity
         musics_rock.add(new Music("Get Up Stand Up", "The Wailers", 243));
 
         MusicAdapter musicAdapter = new MusicAdapter(this, musics_rock);
-        final ListView listView = findViewById(R.id.rock_ListView);
+        ListView listView = findViewById(R.id.music_ListView);
+        listView.setBackgroundResource(R.color.colorRockLight);
         listView.setAdapter(musicAdapter);
 
         //Add onClickListener for each item in listView
